@@ -1,3 +1,5 @@
+import java.io.File;
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
@@ -15,5 +17,20 @@ public class Stream {
 
         System.out.println("Elements stored in another list using toList() function : ");
         smth.stream().forEach(System.out::println);
+
+        File file = new File("smth.txt");
+        
+        try 
+        {
+            if(file.createNewFile())
+            {           
+                System.out.println("File Created.");
+            }
+        }
+
+        catch(IOException jp)
+        {
+            jp.printStackTrace();
+        }
     }
 }
