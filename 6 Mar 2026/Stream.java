@@ -1,4 +1,5 @@
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
@@ -32,5 +33,20 @@ public class Stream {
         {
             jp.printStackTrace();
         }
+
+        try
+        {
+            FileWriter japjit = new FileWriter("smth.txt");
+            japjit.write("Hello\n");
+            japjit.write("My name is Japjit Singh");
+
+            japjit.close();
+        }
+
+        catch(IOException e)
+        {
+            System.err.println("File Not Found" + e.getMessage());
+        }
+        
     }
 }
